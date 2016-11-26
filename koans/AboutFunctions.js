@@ -21,9 +21,9 @@ describe("About Functions", function() {
       return message;
     }
 
-    expect(getMessage()).toBe("Outer");
-    expect(overrideMessage()).toBe("Inner");
-    expect(message).toBe("Outer");
+    expect(getMessage()).toBe('Outer');
+    expect(overrideMessage()).toBe('Inner');
+    expect(message).toBe('Outer');
   });
 
   it("should have lexical scoping", function () {
@@ -35,7 +35,7 @@ describe("About Functions", function() {
       }
       return childfunction();
     }
-    expect(parentfunction()).toBe("local");
+    expect(parentfunction()).toBe('local');
   });
 
   it("should use lexical scoping to synthesise functions", function () {
@@ -61,13 +61,13 @@ describe("About Functions", function() {
       return firstArg;
     }
 
-    expect(returnFirstArg("first", "second", "third")).toBe("first");
+    expect(returnFirstArg("first", "second", "third")).toBe("first", );
 
     function returnSecondArg(firstArg, secondArg) {
       return secondArg;
     }
 
-    expect(returnSecondArg("only give first arg")).toBe(undefined);
+    expect(returnSecondArg("only give first arg")).toBe(FILL_ME_IN);
 
     function returnAllArgs() {
       var argsArray = [];
@@ -77,7 +77,7 @@ describe("About Functions", function() {
       return argsArray.join(",");
     }
 
-    expect(returnAllArgs("first", "second", "third")).toBe('first,second,third');
+    expect(returnAllArgs("first", "second", "third")).toBe(FILL_ME_IN);
   });
 
   it("should pass functions as values", function () {
@@ -91,10 +91,10 @@ describe("About Functions", function() {
     };
 
     var praiseSinger = { givePraise: appendRules };
-    expect(praiseSinger.givePraise("John")).toBe('John rules!');
+    expect(praiseSinger.givePraise("John")).toBe(FILL_ME_IN);
 
     praiseSinger.givePraise = appendDoubleRules;
-    expect(praiseSinger.givePraise("Mary")).toBe('Mary totally rules!');
+    expect(praiseSinger.givePraise("Mary")).toBe(FILL_ME_IN);
 
   });
 });
