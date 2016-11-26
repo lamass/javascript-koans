@@ -8,7 +8,7 @@ describe("About Objects", function () {
     });
 
     it("should confirm objects are collections of properties", function () {
-      expect(megalomaniac.mastermind).toBe("Joker");
+      expect(megalomaniac.mastermind).toBe('Joker');
     });
 
     it("should confirm that properties are case sensitive", function () {
@@ -16,7 +16,7 @@ describe("About Objects", function () {
       expect(megalomaniac.henchWoman).toBe(undefined);
     });
   });
-
+//TESttesT
 
   it("should know properties that are functions act like methods", function () {
     var megalomaniac = {
@@ -44,8 +44,8 @@ describe("About Objects", function () {
       }
     };
 
-    expect(currentYear).toBe(2016);
-    expect(megalomaniac.calculateAge()).toBe(46);
+    expect(currentYear).toBe(2016 );
+    expect(megalomaniac.calculateAge()).toBe(46 );
   });
 
   describe("'in' keyword", function () {
@@ -69,7 +69,7 @@ describe("About Objects", function () {
 
       var hasDetonator = "theDetonator" in megalomaniac;
 
-      expect(hasDetonator).toBe(false );
+      expect(hasDetonator).toBe(false);
     });
   });
 
@@ -96,8 +96,8 @@ describe("About Objects", function () {
       var colouredCircle = new Circle(5);
       colouredCircle.colour = "red";
 
-      expect(simpleCircle.colour).toBe(undefined );
-      expect(colouredCircle.colour).toBe('red');
+      expect(simpleCircle.colour).toBe(undefined);
+      expect(colouredCircle.colour).toBe('red' );
 
       Circle.prototype.describe = function () {
         return "This circle has a radius of: " + this.radius;
